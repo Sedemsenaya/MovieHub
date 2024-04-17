@@ -1,0 +1,6 @@
+/* Media query for screen width up to 390px */
+@media screen and (max-width: 390px) {
+  .search{
+    width: 10px; /* Set the height of the container to 100% of the viewport height */
+  }
+}

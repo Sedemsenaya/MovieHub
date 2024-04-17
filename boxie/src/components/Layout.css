@@ -1,0 +1,15 @@
+/* App.css */
+
+/* Default styles for all screen sizes */
+.layout-container {
+  min-height: 800vh; /* Ensure the container takes up at least 100% of the viewport height */
+}
+
+/* Media query for screen width up to 390px */
+@media screen and (max-width: 390px) {
+  .layout-container{
+    height: 800vh; /* Set the height of the container to 100% of the viewport height */
+  }
+}
+
+
