@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Avatar, Button } from 'antd';
-const UserList = ['U', 'Lucy', 'Tom', 'Edward'];
+const UserList = ['Collins', 'Lucy', 'Tom', 'Edward'];
 const ColorList = ['#f56a00', '#7265e6', '#ffbf00', '#00a2ae'];
 const GapList = [4, 3, 2, 1];
 const App = () => {
@@ -28,26 +28,6 @@ const App = () => {
       >
         {user}
       </Avatar>
-      {/*<Button*/}
-      {/*  size="small"*/}
-      {/*  style={{*/}
-      {/*    margin: '0 16px',*/}
-      {/*    verticalAlign: 'middle',*/}
-      {/*  }}*/}
-      {/*  onClick={changeUser}*/}
-      {/*>*/}
-      {/*  ChangeUser*/}
-      {/*</Button>*/}
-      {/*<Button*/}
-      {/*  size="small"*/}
-      {/*  style={{*/}
-      {/*    verticalAlign: 'middle',*/}
-      {/*  }}*/}
-      {/*  onClick={changeGap}*/}
-      {/*>*/}
-      {/*  changeGap*/}
-      {/*</Button>*/}
-
 
     </>
   );

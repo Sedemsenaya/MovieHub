@@ -5,19 +5,29 @@ import {
     ShoppingCartOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons';
-import { Button, Layout, Menu, theme } from 'antd';
+import {Button, Layout, Menu, theme} from 'antd';
 import './Layout.css'
 import Search from "./Search";
 import Avatar from "./Avatar";
-import Toggler from "./Toggler";
-import Dash from "./Dash";
+import AppRoutes from "../AppRoutes";
+import {useNavigate} from "react-router-dom";
+
+
+
 
 const { Header, Sider, Content } = Layout;
+
+
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const {
+
+  const navigate = useNavigate()
+
+    const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+
   return (
     <Layout className={'layout-container'} style={{
         height:'1vh'
@@ -32,15 +42,18 @@ const App = () => {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={['1']}
+          // defaultSelectedKeys={['1']}
+            onClick = { (item) => {
+                     navigate(item.key)
+                    }}
           items={[
             {
-              key: '1',
+              key: '/',
               icon: <VideoCameraOutlined />,
               label: 'movies',
             },
             {
-              key: '2',
+              key: '/cart',
               icon:<ShoppingCartOutlined style={{fontSize:'21px' }}/>,
               label: 'cart',
             }
@@ -99,7 +112,10 @@ const App = () => {
                        borderRadius: borderRadiusLG,
                    }}
           >
-              <Dash/>
+
+               {/* Define your routes */}
+                <AppRoutes/>
+              {/*<Dash/>*/}
           </Content>
       </Layout>
     </Layout>
